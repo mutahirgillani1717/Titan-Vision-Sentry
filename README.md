@@ -1,14 +1,20 @@
-# Titan Vision: Real-Time Spatial Intelligence & Geofencing
+# Titan Vision: Sentry-Core Spatial Intelligence
 
-Titan Vision is a Computer Vision (CV) security framework designed to run high-speed inference on edge hardware (CPU-only). It implements a custom Sentry-Core HUD to monitor restricted zones using mathematical geofencing.
+Titan Vision is a high-performance Computer Vision (CV) framework engineered to monitor restricted environments. It bridges the gap between raw Object Detection and active Security Auditing by implementing real-time spatial geofencing.
 
-## Key Features
-*   **Real-Time Inference:** Optimized for AMD Ryzen architectures using YOLOv8n.
-*   **Geofencing:** Implements `pointPolygonTest` to trigger alerts based on centroid spatial location rather than simple detection.
-*   **Automated Auditing:** Local evidence capture system with built-in cooldown logic to prevent disk overflow.
-*   **Custom HUD:** Developed using an event-driven GUI architecture to bridge AI models with human operators.
+## 🛡️ Core Engineering Features
+*   **Mathematical Geofencing:** Utilizes the `pointPolygonTest` algorithm to track the centroid (center mass) of detected targets against user-defined restricted zones.
+*   **Sentry-Core HUD:** A custom-built Desktop interface designed with `CustomTkinter` for real-time AI parameter tuning (Confidence & Sensitivity).
+*   **Evidence Logging:** Automated file-system handler that captures timestamped security breaches with a built-in temporal cooldown to prevent disk saturation.
+*   **Edge Optimization:** Optimized for high-frequency inference on AMD Ryzen CPU architectures via YOLOv8n (Nano).
 
-## Technical Stack
-*   **Model:** Ultralytics YOLOv8 (Nano)
-*   **Graphics/UI:** OpenCV, CustomTkinter, Pillow
-*   **Hardware:** Optimized for CPU-based execution[cite: 1].
+## 🛠️ Technical Stack
+*   **Vision Engine:** Ultralytics YOLOv8
+*   **Image Processing:** OpenCV (Open Source Computer Vision Library)
+*   **UI Architecture:** CustomTkinter & Pillow (PIL)
+*   **Core Math:** NumPy (Vectorized coordinate operations)[cite: 1]
+
+## 🚀 Execution
+1. Create environment: `conda create --name titan_vision python=3.10`[cite: 1]
+2. Install dependencies: `pip install ultralytics opencv-python customtkinter pillow`[cite: 1]
+3. Initialize the HUD: `python titan_dashboard.py`[cite: 1]
