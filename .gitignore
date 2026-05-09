@@ -1,0 +1,22 @@
+# --- Python & System ---
+__pycache__/
+*.pyc
+.env
+.venv
+env/
+venv/
+.vscode/
+
+# --- Machine Learning Assets ---
+# We don't upload the weights; the user's script will download them automatically
+*.pt
+*.pth
+*.onnx
+
+# --- Project Specific Data ---
+# Hide the evidence folder so your private photos stay on your laptop
+intruders/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
